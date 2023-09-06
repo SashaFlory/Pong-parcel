@@ -8,8 +8,8 @@ export default class Racket extends Phaser.GameObjects.Rectangle {
     super(scene, x, y, w, h, color);
     scene.add.existing(this); // agrega la paleta a la escena
     scene.physics.add.existing(this);
-    // this.body.setImmovable(true);
-    // this.body.allowGravity = false;
+    this.body.setImmovable(true);
+    this.body.allowGravity = false;
 
     // THIS hace referencia a la clase Racket en este caso
     // THIS suele hacer referencia al objeto que se este trabajando
@@ -20,11 +20,11 @@ export default class Racket extends Phaser.GameObjects.Rectangle {
 
   update() {
     if (this.cursor.left.isDown) {
-      // this.body.setVelocityX(-this.velocity);
+      this.body.setVelocityX(-this.velocity);
     } else if (this.cursor.right.isDown) {
-      // this.body.setVelocityX(this.velocity);
+      this.body.setVelocityX(this.velocity);
     } else {
-      // this.body.setVelocityX(0);
+      this.body.setVelocityX(0);
     }
   }
 }

@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-
+import Pong from "./scenes/Pong";
 import HelloWorldScene from "./scenes/HelloWorldScene";
 import UI from "./scenes/UI";
 
@@ -26,7 +26,7 @@ const config = {
       debug: false,
     },
   },
-  scene: [HelloWorldScene, UI],
+  scene: [Pong, HelloWorldScene, UI],
 };
 
 export default new Phaser.Game(config);
