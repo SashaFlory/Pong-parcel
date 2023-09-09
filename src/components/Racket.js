@@ -26,5 +26,6 @@ export default class Racket extends Phaser.GameObjects.Rectangle {
     } else {
       this.body.setVelocityX(0);
     }
+    
   }
 }
